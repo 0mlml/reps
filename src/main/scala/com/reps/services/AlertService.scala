@@ -326,7 +326,7 @@ class AlertServiceImpl:
           val renewableTotal = solarTotal + windTotal + hydroTotal
           val renewablePercentage = (renewableTotal / gridTotal) * 100
           
-          if renewablePercentage < 30.0 then
+          if renewablePercentage < 40.0 then
             // Find the hour with the lowest renewable percentage
             val hourlyData = getHourlyData(day, solarByDay, windByDay, hydroByDay, totalByDay)
             

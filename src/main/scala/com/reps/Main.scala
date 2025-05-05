@@ -37,12 +37,9 @@ object Main:
         collectAndStoreData()
         mainMenuLoop()
       case "3" =>
-        visualizeEnergyData()
-        mainMenuLoop()
-      case "4" =>
         analyzeEnergyData()
         mainMenuLoop()
-      case "5" =>
+      case "4" =>
         checkAlerts()
         mainMenuLoop()
       case "0" =>
@@ -55,9 +52,8 @@ object Main:
     println("\nMain Menu:")
     println("1. Monitor Energy Data")
     println("2. Collect and Store Data")
-    println("3. Visualize Energy Data")
-    println("4. Analyze Energy Data")
-    println("5. Check Alerts")
+    println("3. Analyze Energy Data")
+    println("4. Check Alerts")
     println("0. Exit")
 
   def selectEnergyType(): EnergyType =
@@ -225,31 +221,6 @@ object Main:
 
       case Failure(_) =>
         println("Invalid value. Please enter a valid number.")
-
-  def visualizeEnergyData(): Unit =
-    println("\n--- Energy Visualization ---")
-
-    val energyType = selectEnergyType()
-    val (startTime, endTime) = selectTimeRange()
-
-    println(s"\nVisualizing ${energyType} from ${startTime
-        .format(dateFormatter)} to ${endTime.format(dateFormatter)}...")
-
-    fileService.readEnergyData(energyType, startTime, endTime) match
-      case Success(data) =>
-        if data.isEmpty then
-          println("No data available for the selected period.")
-        else
-          val report = visualizationService.generateEnergyReport(
-            data,
-            energyType,
-            startTime,
-            endTime
-          )
-          println(report)
-
-      case Failure(exception) =>
-        println(s"Error retrieving data: ${exception.getMessage}")
 
   def analyzeEnergyData(): Unit =
     println("\n--- Data Analysis ---")
