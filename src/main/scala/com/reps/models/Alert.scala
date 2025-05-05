@@ -1,5 +1,5 @@
 package com.reps.models
-
+import scala.collection.immutable._
 import java.time.LocalDateTime
 
 enum AlertType:

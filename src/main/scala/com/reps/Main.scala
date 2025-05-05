@@ -1,5 +1,5 @@
 package com.reps
-
+import scala.collection.immutable._
 import com.reps.models._
 import com.reps.services._
 import com.reps.utils.DateUtils

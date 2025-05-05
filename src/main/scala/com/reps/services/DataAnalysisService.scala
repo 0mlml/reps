@@ -1,5 +1,6 @@
 package com.reps.services
 import com.reps.models._
+import scala.collection.immutable._
 import com.reps.utils.{DateUtils, Statistics as StatsUtil}
 import java.time.LocalDateTime
 import scala.util.Try

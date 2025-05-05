@@ -1,5 +1,5 @@
 package com.reps.models
-
+import scala.collection.immutable._
 enum EnergyType:
   case Solar, Wind, Hydro, Total
 

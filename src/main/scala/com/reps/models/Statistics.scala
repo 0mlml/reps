@@ -1,5 +1,5 @@
 package com.reps.models
-
+import scala.collection.immutable._
 import java.time.LocalDateTime
 
 case class TimeRange(startTime: LocalDateTime, endTime: LocalDateTime)

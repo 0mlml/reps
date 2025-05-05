@@ -1,5 +1,5 @@
 package com.reps.utils
-
+import scala.collection.immutable._
 import scala.annotation.tailrec
 
 object Statistics:

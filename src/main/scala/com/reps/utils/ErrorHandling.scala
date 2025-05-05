@@ -1,5 +1,5 @@
 package com.reps.utils
-
+import scala.collection.immutable._
 import scala.util.{Try, Success, Failure}
 
 object ErrorHandling:
